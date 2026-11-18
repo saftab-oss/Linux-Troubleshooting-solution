@@ -4,7 +4,7 @@
 LIMIT=80
 # Alert threshold: warn if inode usage goes above 80%.
 
-USED=$(df -i --output=ipcent /var/lib/webapp | tail -1 | tr -d ' %')
+USED=$(df  --output=ipcent /var/lib/webapp | tail -1 | tr -d ' %')
 # Get the inode usage as a plain number, saved in USED:
 #   df -i                    → show inode usage
 #   --output=ipcent          → only the IUse% column
